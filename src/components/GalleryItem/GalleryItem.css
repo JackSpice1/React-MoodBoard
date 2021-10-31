@@ -1,0 +1,30 @@
+img {
+    height: 300px;
+    width: 300px;
+}
+
+.gallery-block {
+   margin: 1em;
+}
+
+.photoDesc {
+    font-size: 20px;
+    height: 300px;
+    width: 300px;
+}
+
+.descText {
+    padding-top: 5em;
+    margin-bottom: 0px;
+    font-style: normal;
+}
+
+button {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    margin-top: .2em;
+    font-style: italic;
+}
