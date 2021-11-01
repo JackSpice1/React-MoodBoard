@@ -6,7 +6,6 @@ import './GalleryList.css'
 function GalleryList ( props ) {
     return(
         <div>
-            <h1>ImageList</h1>
             <div className="galleryContainer">
                 { props.images.map( imageItem=>(< GalleryItem imageToSend={imageItem} getImages={props.getImages}/>))}
             </div>

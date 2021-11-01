@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './GalleryItem.css';
 import Axios from "axios";
 import {useState} from "react"; 
+import '../App/App.css'
 // import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 // import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 
@@ -33,8 +34,9 @@ function GalleryItem (props) {
           <div className="cardImage">
               {
                   show?
-                 <h1 onClick={toggleImage}>{props.imageToSend.description}</h1>:
-                 <img className="img" onClick={toggleImage} src={props.imageToSend.path}></img>
+                 <img className="img" onClick={toggleImage} src={props.imageToSend.path}></img>:
+                 <p onClick={toggleImage}>{props.imageToSend.description}</p>
+          
 }
      </div>  
 <div>

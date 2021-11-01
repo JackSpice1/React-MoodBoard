@@ -4,7 +4,8 @@
 }
 
 .App-header {
-  background: #222;
+  background: rgb(63,214,14);
+ background: linear-gradient(90deg, rgba(63,214,14,1) 0%, rgba(13,203,119,1) 35%, rgba(0,243,255,1) 100%);
   padding: 1em;
   color: white;
   margin-bottom: 1em;
@@ -12,7 +13,7 @@
 
 .App-title {
   font-size: 2.5em;
-  font-family: cursive;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
 .img {
