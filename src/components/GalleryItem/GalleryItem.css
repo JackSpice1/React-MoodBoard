@@ -8,6 +8,8 @@ img {
 }
 
 .photoDesc {
+    height: 300px;
+    width: 300px;
     font-size: 10px;
 }
 

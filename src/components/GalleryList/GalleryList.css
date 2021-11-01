@@ -1,5 +1,56 @@
-.gallery {
+.galleryContainer{
     display: flex;
+    /* flex-direction: column; */
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    justify-content: center;
+  }  
+
+.galleryContainer div {
+  /* width: 30%; */
+  /* height: 300px; */
+  /* border:1px solid black; */
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+img{
+  /* object-fit first as much of the image as it can without affecting the aspect ratio */
+  object-fit: contain;
+  height: 300px;
+  width: 100%;
+}
+
+.gallery{
+    /* add a margin-bottom to the gallery to avoid having the NewGalleryItem section from covering up a part of the the images*/
+    margin-bottom: 20vh;
+}
+
+
+.galleryCard{
+    margin: 2px 2px;
+    padding: 5px;
+}
+
+.cardImage{
+    padding: 5px;
+    height: 300px;
+}
+
+  
+.likesCount{
+    font-family: "TenorSans-Regular";
+    font-size: 24px;
+}
+
+
+
+.description {
+    display: flex;
+    /* align-items - y or vertical positioning */
+    align-items: center;
+    /* flex-wrap: wrap; */
+    font-family: "TenorSans-Regular";
+    height: 300px;
+    font-size: 25px;
+    background-color: #ffffff;;
 }
