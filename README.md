@@ -16,7 +16,7 @@ Things to note:
 2. Currently, images are only able to be uploaded through a URL. 
 
 ## Screenshot of Photo Gallery 
-![Screen Shot 2021-11-01 at 5 28 46 PM](https://user-images.githubusercontent.com/87885118/139751249-4f7d9649-3e3f-4323-bffd-41b9b9093653.png
+![image](https://user-images.githubusercontent.com/87885118/139752493-657d9248-66c4-454d-8147-1191540c77c1.png)
 
 ## Prerequisites 
 * Node.js
