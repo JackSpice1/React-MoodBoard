@@ -5,6 +5,7 @@ import {useState} from "react";
 import '../App/App.css'
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import DeleteIcon from '@mui/icons-material/Delete';
+import Swal from 'sweetalert2'
 
 
 function GalleryItem (props) {
@@ -43,6 +44,19 @@ function GalleryItem (props) {
 
 const deleteImg = ()=>{
     console.log("in deleteImg");
+    Swal.fire({
+        title: 'Are you sure?',
+        text: 'This photo will be deleted permanently',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33', 
+        confirmButtonText: 'Yes!'
+     }).then((result) => {
+        if(result.value){
+         this.props.submitUser(this.state)
+       }
+     })
     Axios.delete(`/gallery/delete/${image.id}`,{
         data:{
             id: image.id
@@ -66,9 +80,10 @@ const deleteImg = ()=>{
 }
      </div>  
 <div className="likeAndDeleteImgs">
+    { image.likes===0?
     <FavoriteIcon className="emptyHeartIcon" onClick={updateLikes}/>:
     <FavoriteIcon className="fullHeartIcon" onClick={updateLikes}/>
-    
+}   
    <div> <h4 className="totalLikes">Total Likes: {image.likes} </h4></div>
    <div className="deleteIcon">
        <DeleteIcon onClick={deleteImg}/>

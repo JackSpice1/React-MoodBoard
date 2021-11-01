@@ -2,6 +2,7 @@ const { popoverClasses } = require('@mui/material');
 const express = require('express');
 const router = express.Router();
 const galleryItems = require('../modules/gallery.data');
+const pool = require('../modules/pool'); //connect w/ database 
 
 // DO NOT MODIFY THIS FILE FOR BASE MODE
 
@@ -10,7 +11,7 @@ router.put('/like/:id', (req, res) => {
     console.log(req.params);
     const likes= req.body.likes;
     const queryString= `UPDATE gallery SET likes='${likes}' WHERE id=${req.params.id}`;
-    popoverClasses.query(queryString).then( (results)=>{
+    pool.query(queryString).then( (results)=>{
         res.sendStatus(200);
     }).catch((err)=>{
         console.log(err);
@@ -20,10 +21,10 @@ router.put('/like/:id', (req, res) => {
 
 // GET Route
 router.get('/', (req, res) => {
-    const queryString=`SELECT * FROM gallery ORDER BY id DESC;`;
-    popoverClasses.query(queryString).then((results)=>{
+    const queryString=`SELECT * FROM "gallery" ORDER BY "id" ASC;`;
+    pool.query(queryString).then(results=>{
         res.send(results.rows);
-    }).catch( (err)=>{
+    }).catch( err=>{
     console.log(err);
     res.sendStatus(500);
 })

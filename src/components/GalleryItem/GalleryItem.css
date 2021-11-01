@@ -28,3 +28,63 @@ p {
     margin-top: .2em;
     font-style: italic;
 }
+
+
+.emptyHeartIcon{
+    height: 30px;
+    width: auto;
+    color: #2C2C2C;
+}
+
+.emptyHeartIcon:hover{
+    width: auto;
+    color: #EA4C89;
+}
+
+
+.likesCount{
+    font-family: "TenorSans-Regular";
+    font-size: 24px;
+}
+
+.totalLikes{
+    display: flex;
+}
+
+.deleteIcon{
+    height: 30px;
+    /* width: auto; */
+    color: #2C2C2C;
+    /* display: flex;
+    justify-content: flex-end;
+    margin-left: 200px; */
+}
+
+.deleteIcon:hover{
+    width: auto;
+    color: #EA4C89;
+}
+
+.likeAndDeleteImgs{
+    /* width: 300px; */
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.likesCount{
+    font-family: "TenorSans-Regular";
+    font-size: 24px;
+}
+
+
+
+.description {
+    display: flex;
+    /* align-items - y or vertical positioning */
+    align-items: center;
+    /* flex-wrap: wrap; */
+    font-family: "TenorSans-Regular";
+    height: 300px;
+    font-size: 25px;
+    background-color: #ffffff;;
+}
