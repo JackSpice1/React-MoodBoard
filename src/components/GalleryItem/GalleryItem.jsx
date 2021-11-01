@@ -9,7 +9,7 @@ import {useState} from "react";
 function GalleryItem (props) {
     // const[name, setName] =useState(initialValue)
 
-    const[show, setShow] = UseState( true ); 
+    const[show, setShow] = useState( true ); 
 
     const toggleImage = () =>{
         setShow(!show);
@@ -18,18 +18,15 @@ function GalleryItem (props) {
 
     //create a function that will update the likes function 
     const updateLikes =()=>{
-        setImage({
-            ...image, likes: ++image.likes
-        });
-    }
-    //create put route to request to store image and update db
+       console.log('in updateLikes');
     Axios.put(`/gallery/like/${props.imageToSend.id}`)
-    .then(response=> {
-        console.log(response);
+    .then((response)=> {
+        console.log(response.data);
         props.getImages();
     }).catch(error=>{
         console.log(error);
     })
+}
 
     return(
       <div className="col-3 galleryCard">

@@ -8,7 +8,7 @@ function GalleryList ( props ) {
         <div>
             <h1>ImageList</h1>
             <div className="galleryContainer">
-                { props.galleryItems.map( imageItem=>(< GalleryItem imageToSend={imageItem} getImages={props.getImages}/>))}
+                { props.images.map( imageItem=>(< GalleryItem imageToSend={imageItem} getImages={props.getImages}/>))}
             </div>
         </div>
     )
