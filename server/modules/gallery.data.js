@@ -15,4 +15,4 @@ const galleryItems = [
 
  ];
 
- module.exports = galleryItems;
+ module.exports = galleryItems; 

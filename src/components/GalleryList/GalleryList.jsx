@@ -1,27 +1,17 @@
 import React, { Component } from 'react';
-import GalleryItem from '../GalleryItem/GalleryItem.jsx'
+import GalleryItem from '../GalleryItem/GalleryItem'
 import './GalleryList.css'
 
 
-class GalleryList extends Component {
- 
- render() {
-      console.log(this.props);
-    return (
-      <div className="gallery">
-            {this.props.galleryList.map( (picture) => {
-        return (
-            <GalleryItem key={picture.id} 
-            picture={picture}
-            addLike={this.props.addLike}
-            deleteImage={this.props.deleteImage}/>
-        )
-    })}
-
-      </div>
-        
-    );
-  }
+function GalleryList ( props ) {
+    return(
+        <div>
+            <h1>ImageList</h1>
+            <div className="galleryContainer">
+                { props.galleryItems.map( imageItem=>(< GalleryItem imageToSend={imageItem} getImages={props.getImages}/>))}
+            </div>
+        </div>
+    )
 }
 
 export default GalleryList;
