@@ -3,6 +3,11 @@ import GalleryList from '../GalleryList/GalleryList';
 import './App.css';
 import axios from 'axios';
 
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+/>
+
 function App () {
 // create place for images to be stored 
 const [images, setImages] = useState( [] );
