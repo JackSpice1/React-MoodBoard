@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
 import './GalleryItem.css';
-import { Button } from '@material-ui/core';
-import DeleteIcon from '@material-ui/icons/Delete';
-import IconButton from '@material-ui/core/IconButton';
-
 
 class GalleryItem extends Component {
 
